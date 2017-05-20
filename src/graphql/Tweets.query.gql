@@ -1,0 +1,10 @@
+query tweets {
+  Tweet(first:50) {
+    created
+    postedBy {
+      screen_name
+      profile_image_url
+    }
+    text 
+  }
+}

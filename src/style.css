@@ -1,0 +1,219 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic";
+
+:root {
+  --filterx2: contrast(1) brightness(1.2) hue-rotate(-20deg);
+}
+
+* {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+body {
+  font-family: "Roboto", 'Helvetica Neue, Helvetica, Arial', sans-serif;
+  overflow-y: hidden;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+#root, html {
+  height: 100%;
+}
+
+.app {
+  margin: 0px;
+  height: 100%;
+  overflow-y: auto;
+}
+.app::before {
+  content: '';
+  margin-bottom: 50px; 
+  display: block;
+}
+ul {
+  margin-bottom: 85px;
+}
+.list {
+  margin-bottom: 85px;
+  overflow: hidden;
+}
+
+.navbar {
+  height: 60px;
+}
+.navbar-inverse {
+  background-color: #e91e63;
+  border-color: #080808;
+}
+
+li.complete {
+  text-decoration: line-through;
+}
+
+a.inactive {
+  text-decoration: none;
+}
+
+
+.profile-small {
+  position: relative; 
+  float: left;
+  margin-right: 10px;
+}
+.profile-small img {
+  width: 4em;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  margin-top: 0px;
+  background: white;
+  filter: var(--filterx2);
+  -webkit-filter: var(--filterx2);
+  -moz-filter: var(--filterx2);
+  -ms-filter: var(--filterx2);
+  -o-filter: var(--filterx2);
+}
+.profile-small-text {
+  line-height: 3;
+  color: #aaa;
+  text-shadow: none;
+  font-style: italic;
+  font-size: 1.5em;
+}
+.profile-small-text time {
+  text-shadow: none;
+}
+
+.button-top {
+  margin-top: 14px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+li {
+  padding: 45px 10% 30px 10%;
+}
+
+li { 
+  background: #f9f9f9; /* fallback */
+  background: -webkit-linear-gradient(0deg,#f9f9f9, #fff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(0deg,#f9f9f9, #fff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(0deg,#f9f9f9, #fff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(0deg, #f9f9f9, #fff); /* Standard syntax */
+}
+
+.text-header {
+  font-style: italic;
+  font-size: 1em;
+  color: #888;
+  text-align: left;
+}
+.text-body {
+  font-weight: 300;
+  font-size: 3em;
+  color: #424242;
+  line-height: 1;
+  padding: 2px;
+}
+.text-body p {
+  padding: 3px;
+}
+
+/* fixes for bootstrap */
+.nav>li>a:focus, .nav>li>a:hover {
+  text-decoration: none;
+  background-color: rgba(0,0,0,0);
+}
+.navbar-collapse {
+  border: 0px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.centerBlock {
+  display: table;
+  margin: 0 auto;
+}
+.app-title {
+  font-size: 35px;
+  color: #ffc107;
+  line-height: 1.9;
+}
+
+@media only screen and (max-width: 767px) {
+  .app-title {
+    font-size: 25px;
+    line-height: 2.3;
+  }
+  li {
+    padding: 45px 40px 30px 40px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .app-title {
+    font-size: 22px;
+    line-height: 2;
+  }
+}
+
+a.twitter {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+a.twitter:hover {
+  text-decoration: underline;
+}
+
+/* alerts styling */
+.s-alert-box {
+  border: 1px solid transparent;
+  opacity: .9;
+}
+.s-alert-wrapper .s-alert-info {
+  background: #e91e63;
+  color: #fff;
+}
+.s-alert-wrapper .s-alert-success {
+  background: #45edc6;
+  color: #fff;
+}
+.s-alert-wrapper .s-alert-warning {
+  background: #ffcc33; 
+  color: #fff;
+}
+.s-alert-wrapper .s-alert-error {
+  background: #f44336;
+  color: #fff;
+}
+
+.centered {
+  position: fixed;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+  background-color: white;
+  height: 150px;
+  width: 350px;
+  margin-top: -90px;
+  margin-left: -175px;
+}
+svg#loader-1 {
+  height: 60px;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  transition: all 0.2s ease-in-out;
+  border-radius: 40px;
+  height: 40px;
+}
+.btn-primary:not([disabled]), .btn-primary:hover:not([disabled]), .btn-primary:focus:not([disabled]), .btn-primary:active:not([disabled]), .btn-primary:active:hover:not([disabled]) {
+  background-color: #e91e63;
+  border-color: #e91e63;
+}
+.btn-primary:hover:not([disabled]),.btn-primary:active, .btn-primary:active:hover:not([disabled]) {
+  background-color: #ff0a5c;
+  border-color: #ff0a5c;
+}
