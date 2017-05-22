@@ -10,7 +10,7 @@ class TopNavigation extends React.Component {
             <div className='col-md-2 col-xs-1' />
             <div className='col-md-8 col-xs-10'>
               <div className='centerBlock app-title'>
-                GraphQL Tweets 🍩
+                GraphQL Seed 🍩
               </div>
             </div>
             <div className='col-md-2 col-xs-1' />

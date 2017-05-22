@@ -1,19 +1,19 @@
 import React from 'react'
-import Tweet from './Tweet'
+import Item from './Item'
 import { graphql } from 'react-apollo'
 import Loading from './Loading'
 
-import TWEETS_QUERY from '../graphql/Tweets.query.gql'
+import LIST_QUERY from '../graphql/List.query.gql'
 
-class TweetsList extends React.Component {
+class List extends React.Component {
 
   refetch() {
     this.props.data.refetch()
   }
 
   isEmpty() {
-    return (!this.props.loading && (!this.props.tweets ||
-      this.props.tweets && (this.props.tweets.length===0)))
+    return (!this.props.loading && (!this.props.list ||
+      this.props.list && (this.props.list.length===0)))
   }
 
   refresh() {
@@ -36,15 +36,12 @@ class TweetsList extends React.Component {
     return (
       <div className='list'>
         <ul>
-          { this.props.tweets && this.props.tweets.map((t, i) =>
-            <Tweet
-              key={i}
-              tweet={t}
-            />
+          { this.props.list && this.props.list.map((item, i) =>
+            <Item key={i} item={item} />
           )}
         </ul>
         {this.refresh()}
-        {this.isEmpty()? <div className='centered text-body'>There are no tweets.</div> : null }
+        {this.isEmpty()? <div className='centered text-body'>There are no entries.</div> : null }
         {this.props.loading ? <Loading /> : null}
         <section id='bottom' />
       </div>
@@ -52,17 +49,17 @@ class TweetsList extends React.Component {
   }
 }
 
-const withTweets = graphql(TWEETS_QUERY,
+const withList = graphql(LIST_QUERY,
   {
     props: ({ data }) => {
       if (data.loading) return { loading: true }
       if (data.error) return { hasErrors: true }
       return {
-        tweets: data.Tweet,
+        list: data.allQuestions,
         data,
       }
     },
   },
 )
 
-export default withTweets(TweetsList)
+export default withList(List)
