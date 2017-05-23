@@ -9,13 +9,13 @@ GraphQL Seed project using:
 # Setup
 Fill in your GraphQL endpoint to start building
 
-```
+<pre>
 // src/client.js
 const networkInterface = createNetworkInterface({
-  uri: 'GRAPHQL_ENDPOINT',
+uri: '<b>GRAPHQL_ENDPOINT</b>',
   dataIdFromObject: record => record.id,
 })
-```
+</pre>
 
 ## File Structure
 ```
