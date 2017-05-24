@@ -1,5 +1,5 @@
 {
-  "name": "migration",
+  "name": "GraphQL-seed",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

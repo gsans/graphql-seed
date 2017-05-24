@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom'
 
-import TopNavigation from './TopNavigation'
-import List from './List'
+import TopNavigation from './components/TopNavigation'
+import List from './components/List'
 
 class AppBase extends React.Component {
 
