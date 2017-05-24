@@ -11,7 +11,7 @@ class List extends React.Component {
 
   isEmpty() {
     const {loading, list} = this.props;
-    return (!loading && (!list || list && (list.length === 0)))
+    return !loading && (!list || (list && list.length === 0))
   }
 
   refresh() {
