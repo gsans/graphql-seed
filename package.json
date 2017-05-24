@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "apollo-client": "^1.2.2",
+    "prop-types": "^15.5.10",
     "react": "^15.5.4",
     "react-apollo": "^1.2.0",
     "react-dom": "^15.5.4",

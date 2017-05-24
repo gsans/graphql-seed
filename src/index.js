@@ -26,7 +26,7 @@ const store = compose(
     client.middleware(),
   ),
   window.devToolsExtension ? window.devToolsExtension() : f => f
-)(createStore)(combinedReducer)
+)(createStore)(combinedReducer);
 
 class AppWrapper extends React.Component {
   render() {
@@ -42,5 +42,7 @@ ReactDOM.render(
       <Route path='/' component={AppWrapper}/>
     </HashRouter>
   </ApolloProvider>,
-  document.getElementById('root'));
+  document.getElementById('root')
+);
+
 registerServiceWorker();
