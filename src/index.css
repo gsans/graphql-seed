@@ -26,7 +26,7 @@ body {
 }
 .app::before {
   content: '';
-  margin-bottom: 50px; 
+  margin-bottom: 50px;
   display: block;
 }
 ul {
@@ -55,7 +55,7 @@ a.inactive {
 
 
 .profile-small {
-  position: relative; 
+  position: relative;
   float: left;
   margin-right: 10px;
 }
@@ -94,7 +94,7 @@ li {
   padding: 45px 10% 30px 10%;
 }
 
-li { 
+li {
   background: #f9f9f9; /* fallback */
   background: -webkit-linear-gradient(0deg,#f9f9f9, #fff); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(0deg,#f9f9f9, #fff); /* For Opera 11.1 to 12.0 */
@@ -180,7 +180,7 @@ a.twitter:hover {
   color: #fff;
 }
 .s-alert-wrapper .s-alert-warning {
-  background: #ffcc33; 
+  background: #ffcc33;
   color: #fff;
 }
 .s-alert-wrapper .s-alert-error {

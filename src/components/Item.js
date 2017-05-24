@@ -1,24 +1,20 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class Item extends React.Component {
-
-  render() {
-    return (
-      <li>
-        <div className='row'>
-          <div className='col-md-12'>
-            <div className='text-body'>
-              {this.props.item.body}</div>
-          </div>
+const Item = ({ item }) => (
+  <li>
+    <div className="row">
+      <div className="col-md-12">
+        <div className="text-body">
+          {item.body}
         </div>
-      </li>
-    )
-  }
-}
+      </div>
+    </div>
+  </li>
+);
 
 Item.propTypes = {
   item: PropTypes.object.isRequired,
-}
+};
 
-export default Item
+export default Item;

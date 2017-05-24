@@ -1,5 +1,0 @@
-query questions {
-  allQuestions {
-    id body
-  }
-}
